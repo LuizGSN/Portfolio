@@ -4,7 +4,7 @@ import { keyframes } from 'styled-components';
 export const IconeHabilidade = styled.div`
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
   transition: all 0.4s ease;
 
   @media (max-width: 768px) {
@@ -16,7 +16,7 @@ export const NomeHabilidade = styled.h3`
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
   transition: all 0.4s ease;
 
   @media (max-width: 768px) {
@@ -90,7 +90,7 @@ export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: var(--cor-secundaria);
+  color: var(--cor-primaria);
   position: relative;
   
   &::after {

@@ -9,7 +9,7 @@ export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-align: center;
-  color: #333;
+  color: var(--cor-texto);
 `;
 
 export const ContainerForm = styled.div`

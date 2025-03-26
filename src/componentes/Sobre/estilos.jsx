@@ -53,7 +53,7 @@ export const TextoSobre = styled.div`
   p {
     margin-bottom: 1.8rem;
     line-height: 1.8;
-    color: var(--cor-fundo);
+    color: var(--cor-texto);
     font-size: 1.1rem;
   }
 

@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const EstiloGlobal = createGlobalStyle`
   :root {
-    --cor-primaria: #08D9D6;
-    --cor-secundaria: #252A34;
-    --cor-destaque: #FF2E63;
-    --cor-fundo: #EAEAEA;
+    --cor-primaria: #000000;
+    --cor-secundaria: #F0F3FF;
+    --cor-destaque: #06D001;
+    --cor-fundo: #F0F3FF;
     --cor-texto: #252A34;
     --cor-texto-claro: #5a5f6b;
   }

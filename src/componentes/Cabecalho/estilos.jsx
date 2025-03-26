@@ -36,7 +36,7 @@ export const Logo = styled.div`
   }
 
   span {
-    color: var(--cor-fundo);
+    color: var(--cor-primaria);
   }
 `;
 
@@ -45,19 +45,33 @@ export const Navegacao = styled.nav`
     display: flex;
     gap: 2.5rem;
     list-style: none;
+    align-items: center; /* Adicione isso para alinhamento vertical */
+    margin: 0;
+    padding: 0;
   }
 
   li {
     position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
-  a {
+  a, button {
     font-weight: 500;
-    color: var(--cor-fundo);
+    color: var(--cor-primaria);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s;
     font-size: 1.1rem;
     padding: 0.5rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
 
     &:hover {
       color: var(--cor-primaria);
@@ -80,6 +94,7 @@ export const Navegacao = styled.nav`
 
     &.active {
       font-weight: 600;
+      color: var(--cor-destaque);
     }
   }
 
@@ -113,7 +128,7 @@ export const MenuMobileContainer = styled.div`
   right: ${({ $aberto }) => ($aberto ? '0' : '-100%')};
   width: 70%;
   height: 100vh;
-  background: white;
+  background: var(--cor-fundo);
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
@@ -122,16 +137,26 @@ export const MenuMobileContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  a {
-    color: #333;
+  a, button {
+    color: var(--cor-primaria);
     text-decoration: none;
     font-size: 1.2rem;
     padding: 0.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--cor-destaque);
     transition: color 0.3s;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
 
     &:hover {
-      color: #646cff;
+      color: var(--cor-primaria);
+    }
+
+    &.active {
+      color: var(--cor-destaque);
+      font-weight: 600;
     }
   }
 `;
