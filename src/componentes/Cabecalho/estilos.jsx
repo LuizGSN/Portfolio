@@ -99,6 +99,7 @@ export const MenuMobile = styled.div`
 
   svg {
     transition: transform 0.3s;
+    color: var(--cor-primaria);
     
     &:hover {
       transform: scale(1.1);
