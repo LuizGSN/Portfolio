@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { keyframes } from 'styled-components';
 
-// Componentes básicos primeiro
 export const IconeHabilidade = styled.div`
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
@@ -25,14 +24,12 @@ export const NomeHabilidade = styled.h3`
   }
 `;
 
-// Animações
 const floatAnimation = keyframes`
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 `;
 
-// Componente ItemHabilidade que usa os componentes básicos
 export const ItemHabilidade = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,16 +74,15 @@ export const ItemHabilidade = styled.div`
   }
 `;
 
-// Seção principal - AGORA OCUPANDO 100% DA TELA
 export const SecaoHabilidades = styled.section`
-  min-height: 100vh; /* Ocupa pelo menos 100% da altura da tela */
+  min-height: 100vh;
   width: 100%;
   padding: 5% 5%;
   background-color: var(--cor-fundo);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;
+  align-items: center; 
   scroll-snap-align: start;
 `;
 

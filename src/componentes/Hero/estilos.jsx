@@ -97,7 +97,7 @@ export const SubtituloHero = styled.h2`
 
 export const BotaoHero = styled.a`
   padding: 1rem 2.5rem;
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-primaria);
   color: white;
   border-radius: 50px;
   font-weight: 500;
@@ -106,14 +106,14 @@ export const BotaoHero = styled.a`
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 46, 99, 0.3);
+  box-shadow: 0 4px 15px var(--cor-primaria);
   position: relative;
   overflow: hidden;
   z-index: 1;
 
   &:hover {
     background-color: #e02959;
-    box-shadow: 0 6px 20px rgba(255, 46, 99, 0.6);
+    box-shadow: 0 6px 20px var(--cor-destaque);
   }
 
   &::before {

@@ -46,8 +46,6 @@ function Cabecalho() {
           {menuAberto ? <FiX size={24} /> : <FiMenu size={24} />}
         </MenuMobile>
       </ContainerCabecalho>
-
-      {/* Menu Mobile */}
       <MenuMobileContainer $aberto={menuAberto}>
         <Link to="/" onClick={closeMenu} className={location.pathname === '/' ? 'active' : ''}>Início</Link>
         <a href="#sobre" onClick={closeMenu}>Sobre</a>
