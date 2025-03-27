@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SecaoSobre = styled.section`
   min-height: 100vh;
   padding: 8rem 5% 5rem;
-  background-color: var(--cor-secundaria);
+  background-color: ${({ theme }) => theme.fundo};
   display: flex;
   align-items: center;
   scroll-snap-align: start;
@@ -23,7 +23,7 @@ export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: var(--cor-primaria);
+  color: ${({ theme }) => theme.primaria};
   position: relative;
   
   &::after {
@@ -31,9 +31,14 @@ export const TituloSecao = styled.h2`
     display: block;
     width: 80px;
     height: 4px;
-    background: var(--cor-destaque);
+    background: ${({ theme }) => theme.destaque};
     margin: 1rem auto 0;
     border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -53,7 +58,7 @@ export const TextoSobre = styled.div`
   p {
     margin-bottom: 1.8rem;
     line-height: 1.8;
-    color: var(--cor-texto);
+    color: ${({ theme }) => theme.texto};
     font-size: 1.1rem;
   }
 

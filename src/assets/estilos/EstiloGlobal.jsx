@@ -2,12 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const EstiloGlobal = createGlobalStyle`
   :root {
-    --cor-primaria: #000000;
-    --cor-secundaria: #F0F3FF;
-    --cor-destaque: #06D001;
-    --cor-fundo: #F0F3FF;
-    --cor-texto: #252A34;
-    --cor-texto-claro: #5a5f6b;
+    --cor-primaria: ${({ theme }) => theme.primaria};
+    --cor-secundaria: ${({ theme }) => theme.secundaria};
+    --cor-destaque: ${({ theme }) => theme.destaque};
+    --cor-fundo: ${({ theme }) => theme.fundo};
+    --cor-texto: ${({ theme }) => theme.texto};
+    --cor-texto-claro: ${({ theme }) => theme.textoClaro};
   }
 
   * {
@@ -21,6 +21,7 @@ const EstiloGlobal = createGlobalStyle`
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   a {

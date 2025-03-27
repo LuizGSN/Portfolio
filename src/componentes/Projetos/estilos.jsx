@@ -10,7 +10,7 @@ const fadeIn = keyframes`
 export const SecaoProjetos = styled.section`
   min-height: 100vh;
   padding: 8rem 5%;
-  background-color: var(--cor-fundo);
+  background-color: ${({ theme }) => theme.fundo};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@ export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: var(--cor-primaria);
+  color: ${({ theme }) => theme.primaria};
   position: relative;
   animation: ${fadeIn} 0.8s ease-out;
   
@@ -30,7 +30,7 @@ export const TituloSecao = styled.h2`
     display: block;
     width: 80px;
     height: 4px;
-    background: var(--cor-destaque);
+    background: ${({ theme }) => theme.destaque};
     margin: 1rem auto 0;
     border-radius: 2px;
   }
@@ -82,13 +82,13 @@ export const InfoProjeto = styled.div`
 export const TituloProjeto = styled.h3`
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   transition: color 0.3s ease;
   font-weight: 600;
 `;
 
 export const DescricaoProjeto = styled.p`
-  color: var(--cor-texto-claro);
+  color: ${({ theme }) => theme.textoClaro};
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -104,7 +104,7 @@ export const IconesTecnologia = styled.div`
 export const IconeTecnologia = styled.div`
   position: relative;
   font-size: 1.8rem;
-  color: var(--cor-primaria);
+  color: ${({ theme }) => theme.primaria};
   transition: all 0.3s ease;
   cursor: default;
   
@@ -113,8 +113,8 @@ export const IconeTecnologia = styled.div`
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--cor-texto);
-    color: white;
+    background: ${({ theme }) => theme.texto};
+    color: ${({ theme }) => theme.fundo};
     padding: 0 0.3rem;
     border-radius: 4px;
     font-size: 0.7rem;
@@ -125,7 +125,7 @@ export const IconeTecnologia = styled.div`
   }
 
   &:hover {
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.destaque};
     transform: scale(1.1);
     
     .tooltip {
@@ -141,16 +141,16 @@ export const IconeTecnologia = styled.div`
 export const CartaoProjeto = styled.div`
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(37, 42, 52, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
-  background: white;
+  background: ${({ theme }) => theme.secundaria};
   position: relative;
   z-index: 1;
   will-change: transform;
   
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(37, 42, 52, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     
     ${ImagemProjeto} {
       transform: scale(1.05);

@@ -5,9 +5,9 @@ export const ContainerCabecalho = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 5%;
-  background-color: var(--cor-secundaria);
+  background-color: ${({ theme }) => theme.fundo};
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
   top: 0;
@@ -23,7 +23,7 @@ export const ContainerCabecalho = styled.header`
 export const Logo = styled.div`
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--cor-primaria);
+  color: ${({ theme }) => theme.primaria};
   cursor: pointer;
   transition: transform 0.3s, color 0.3s;
   display: flex;
@@ -32,11 +32,11 @@ export const Logo = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.destaque};
   }
 
   span {
-    color: var(--cor-primaria);
+    color: ${({ theme }) => theme.primaria};
   }
 `;
 
@@ -59,7 +59,7 @@ export const Navegacao = styled.nav`
 
   a, button {
     font-weight: 500;
-    color: var(--cor-primaria);
+    color: ${({ theme }) => theme.primaria};
     text-decoration: none;
     transition: all 0.3s;
     font-size: 1.1rem;
@@ -74,7 +74,7 @@ export const Navegacao = styled.nav`
     position: relative;
 
     &:hover {
-      color: var(--cor-primaria);
+      color: ${({ theme }) => theme.primaria};
     }
 
     &::after {
@@ -84,7 +84,7 @@ export const Navegacao = styled.nav`
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: var(--cor-destaque);
+      background-color: ${({ theme }) => theme.destaque};
       transition: width 0.3s;
     }
 
@@ -94,7 +94,7 @@ export const Navegacao = styled.nav`
 
     &.active {
       font-weight: 600;
-      color: var(--cor-destaque);
+      color: ${({ theme }) => theme.destaque};
     }
   }
 
@@ -114,12 +114,25 @@ export const MenuMobile = styled.div`
 
   svg {
     transition: transform 0.3s;
-    color: var(--cor-primaria);
+    color: ${({ theme }) => theme.primaria};
     
     &:hover {
       transform: scale(1.1);
     }
   }
+`;
+
+export const BotaoTema = styled.button`
+  background: ${({ theme }) => theme.destaque};
+  color: ${({ theme }) => theme.fundo};
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const MenuMobileContainer = styled.div`
@@ -128,7 +141,7 @@ export const MenuMobileContainer = styled.div`
   right: ${({ $aberto }) => ($aberto ? '0' : '-100%')};
   width: 70%;
   height: 100vh;
-  background: var(--cor-fundo);
+  background: ${({ theme }) => theme.fundo};
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 1000;
@@ -138,11 +151,11 @@ export const MenuMobileContainer = styled.div`
   gap: 2rem;
 
   a, button {
-    color: var(--cor-primaria);
+    color: ${({ theme }) => theme.primaria};
     text-decoration: none;
     font-size: 1.2rem;
     padding: 0.5rem;
-    border-bottom: 1px solid var(--cor-destaque);
+    border-bottom: 1px solid ${({ theme }) => theme.destaque};
     transition: color 0.3s;
     background: none;
     border: none;
@@ -151,11 +164,11 @@ export const MenuMobileContainer = styled.div`
     font-family: inherit;
 
     &:hover {
-      color: var(--cor-primaria);
+      color: ${({ theme }) => theme.primaria};
     }
 
     &.active {
-      color: var(--cor-destaque);
+      color: ${({ theme }) => theme.destaque};
       font-weight: 600;
     }
   }

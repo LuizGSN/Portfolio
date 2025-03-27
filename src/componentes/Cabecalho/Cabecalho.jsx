@@ -5,11 +5,12 @@ import {
   Logo, 
   Navegacao, 
   MenuMobile,
-  MenuMobileContainer
+  MenuMobileContainer,
+  BotaoTema
 } from './estilos';
 import { FiMenu, FiX } from 'react-icons/fi';
 
-function Cabecalho() {
+function Cabecalho({ alternarTema, temaDark }) {
   const [menuAberto, setMenuAberto] = useState(false);
   const [scroll, setScroll] = useState(false);
   const location = useLocation();
@@ -66,8 +67,8 @@ function Cabecalho() {
   return (
     <>
       <ContainerCabecalho className={scroll ? 'scroll' : ''}>
-      <Logo as={Link} to="/" onClick={handleLogoClick}>
-          <span>Meu</span>Portfólio
+        <Logo as={Link} to="/" onClick={handleLogoClick}>
+          <span>Luiz</span>Gonzaga
         </Logo>
         
         <Navegacao>
@@ -77,7 +78,8 @@ function Cabecalho() {
                 to="/"
                 onClick={() => handleNavigation('/')}
                 className={location.pathname === '/' ? 'active' : ''}
-                > Início
+              >
+                Início
               </Link>    
             </li>
             <li>
@@ -99,6 +101,11 @@ function Cabecalho() {
               <button onClick={() => handleNavigation('#contato', true)}>
                 Contato
               </button>
+            </li>
+            <li>
+              <BotaoTema onClick={alternarTema}>
+                {temaDark ? '☀️ Modo Claro' : '🌙 Modo Escuro'}
+              </BotaoTema>
             </li>
           </ul>
         </Navegacao>
@@ -127,6 +134,9 @@ function Cabecalho() {
         <button onClick={() => handleNavigation('#contato', true)}>
           Contato
         </button>
+        <BotaoTema onClick={alternarTema}>
+          {temaDark ? '☀️ Modo Claro' : '🌙 Modo Escuro'}
+        </BotaoTema>
       </MenuMobileContainer>
     </>
   );

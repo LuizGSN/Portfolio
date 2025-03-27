@@ -6,7 +6,7 @@ import {
   LinkSocial,
   Creditos
 } from './estilos';
-import { FaGithub, FaLinkedin, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 function Rodape() {
@@ -14,15 +14,7 @@ function Rodape() {
     <ContainerRodape>
       <ConteudoRodape>
         <LinksRedeSocial>
-          <LinkSocial 
-            href="https://github.com/seu-usuario" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FaGithub size={24} />
-          </LinkSocial>
-          
+
           <LinkSocial 
             href="https://linkedin.com/in/seu-perfil" 
             target="_blank" 
@@ -30,6 +22,15 @@ function Rodape() {
             aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
+          </LinkSocial>
+
+          <LinkSocial 
+            href="https://github.com/seu-usuario" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub size={24} />
           </LinkSocial>
           
           <LinkSocial 
@@ -41,7 +42,7 @@ function Rodape() {
         </LinksRedeSocial>
         
         <Creditos>
-          © {new Date().getFullYear()} Luiz Gonzaga - Feito com <FaHeart color="#ff6b6b" /> e React
+          © {new Date().getFullYear()} Luiz Gonzaga
         </Creditos>
       </ConteudoRodape>
     </ContainerRodape>

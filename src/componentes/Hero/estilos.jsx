@@ -23,7 +23,7 @@ export const SecaoHero = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0 5%;
-  background-color: var(--cor-secundaria);
+  background-color: ${({ theme }) => theme.fundo};
   position: relative;
   overflow: hidden;
   height: 100vh;
@@ -78,7 +78,7 @@ export const SubtituloHero = styled.h2`
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 400;
   margin-bottom: 2rem;
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   line-height: 1.6;
   max-width: 100%;
 
@@ -90,17 +90,16 @@ export const SubtituloHero = styled.h2`
   .cursor {
     display: inline-block;
     animation: ${piscaCursor} 0.7s infinite;
-    color: var(--cor-primaria);
+    color: ${({ theme }) => theme.primaria};
   }
 `;
 
 export const TituloHero = styled.h1`
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 1.5rem;
-  color: var(--cor-destaque);
   line-height: 1.2;
   font-weight: 400;
-  background: var(--cor-texto);
+  background: ${({ theme }) => theme.texto};
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -113,8 +112,8 @@ export const TituloHero = styled.h1`
 
 export const BotaoHero = styled.button`
   padding: 1rem 2rem;
-  background-color: var(--cor-primaria);
-  color: white;
+  background-color: ${({ theme }) => theme.primaria};
+  color: ${({ theme }) => theme.secundaria};
   border: none;
   border-radius: 50px;
   font-weight: 500;
@@ -131,7 +130,7 @@ export const BotaoHero = styled.button`
   z-index: 1;
 
   &:hover {
-    background-color: var(--cor-destaque);
+    background-color: ${({ theme }) => theme.destaque};
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
@@ -150,7 +149,7 @@ export const BotaoHero = styled.button`
   }
 
   &:focus {
-    outline: 2px solid var(--cor-destaque);
+    outline: 2px solid ${({ theme }) => theme.destaque};
     outline-offset: 3px;
   }
 `;
@@ -163,13 +162,13 @@ export const RedesSociais = styled.div`
 `;
 
 export const IconeRedeSocial = styled.a`
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   font-size: 1.8rem;
   transition: all 0.3s ease;
   opacity: 0.8;
 
   &:hover {
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.destaque};
     opacity: 1;
     transform: translateY(-3px);
   }

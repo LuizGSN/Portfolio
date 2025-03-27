@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ContainerRodape = styled.footer`
   padding: 3rem 5%;
-  background: var(--cor-primaria);
-  color: white;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: ${({ theme }) => theme.fundo === '#252A34' ? '#252A34' : theme.primaria};
+  color: ${({ theme }) => theme.secundaria};
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
 export const ConteudoRodape = styled.div`
@@ -22,7 +22,7 @@ export const LinksRedeSocial = styled.div`
 `;
 
 export const LinkSocial = styled.a`
-  color: white;
+  color: ${({ theme }) => theme.secundaria};
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ export const LinkSocial = styled.a`
   background: rgba(255, 255, 255, 0.1);
   
   &:hover {
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.destaque};
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
   }

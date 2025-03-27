@@ -2,26 +2,26 @@ import React from 'react';
 import { 
   SecaoHabilidades, 
   TituloSecao, 
-  GradeHabilidades, 
-  ItemHabilidade, 
-  IconeHabilidade, 
-  NomeHabilidade 
+  ContainerGrid,
+  ColunaSoftSkills,
+  ListaSoftSkills,
+  ItemSoftSkill,
+  ColunaHardSkills,
+  IconeHardSkill,
+  GridHardSkills
 } from './estilos';
 import { 
-  DiJavascript1, 
-  DiReact, 
-  DiNodejs, 
-  DiHtml5, 
-  DiCss3, 
-  DiDatabase,
-  DiGit,
-  DiGithubBadge,
-  DiPython
+  DiJavascript1, DiReact, DiNodejs, DiHtml5, DiCss3, DiDatabase,
+  DiGit, DiGithubBadge, DiPython
 } from 'react-icons/di';
+import { 
+  FaUsers, FaComments, FaLightbulb, FaHandsHelping, FaClock 
+} from 'react-icons/fa';
+import { MdOutlineChangeCircle } from 'react-icons/md';
 import { SiTypescript, SiStyledcomponents } from 'react-icons/si';
 
 function Habilidades() {
-  const habilidades = [
+  const hardSkills = [
     { nome: 'JavaScript', icone: <DiJavascript1 /> },
     { nome: 'TypeScript', icone: <SiTypescript /> },
     { nome: 'React', icone: <DiReact /> },
@@ -35,17 +35,42 @@ function Habilidades() {
     { nome: 'GitHub', icone: <DiGithubBadge /> },
   ];
 
+  const softSkills = [
+    { nome: "Trabalho em Equipe", icone: <FaUsers /> },
+    { nome: "Comunicação Clara", icone: <FaComments /> },
+    { nome: "Resolução de Problemas", icone: <FaLightbulb /> },
+    { nome: "Pensamento Crítico", icone: <FaHandsHelping /> },
+    { nome: "Adaptabilidade", icone: <MdOutlineChangeCircle /> },
+    { nome: "Gestão de Tempo", icone: <FaClock /> }
+  ];
+
   return (
     <SecaoHabilidades id="habilidades">
       <TituloSecao>Minhas Habilidades</TituloSecao>
-      <GradeHabilidades>
-        {habilidades.map((habilidade, index) => (
-          <ItemHabilidade key={index}>
-            <IconeHabilidade>{habilidade.icone}</IconeHabilidade>
-            <NomeHabilidade>{habilidade.nome}</NomeHabilidade>
-          </ItemHabilidade>
-        ))}
-      </GradeHabilidades>
+      
+      <ContainerGrid>
+        <ColunaSoftSkills>
+          <h3>Soft Skills</h3>
+            <ListaSoftSkills>
+              {softSkills.map((skill, index) => (
+                <ItemSoftSkill key={index}>
+                  {skill.icone} {skill.nome}
+                </ItemSoftSkill>
+              ))}
+            </ListaSoftSkills>
+        </ColunaSoftSkills>
+
+        <ColunaHardSkills>
+          <h3>Hard Skills</h3>
+            <GridHardSkills>
+              {hardSkills.map((skill, index) => (
+                <IconeHardSkill key={index} title={skill.nome}>
+                  {skill.icone}
+                </IconeHardSkill>
+              ))}
+            </GridHardSkills>
+        </ColunaHardSkills>
+      </ContainerGrid>
     </SecaoHabilidades>
   );
 }

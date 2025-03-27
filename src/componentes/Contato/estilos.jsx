@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const SecaoContato = styled.section`
   padding: 5rem 5%;
-  background-color: var(--cor-fundo-claro);
+  background-color: ${({ theme }) => theme.fundoClaro || theme.fundo};
   text-align: center;
 `;
 
 export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--cor-primaria);
+  color: ${({ theme }) => theme.primaria};
   position: relative;
   
   &::after {
@@ -17,7 +17,7 @@ export const TituloSecao = styled.h2`
     display: block;
     width: 80px;
     height: 4px;
-    background: var(--cor-destaque);
+    background: ${({ theme }) => theme.destaque};
     margin: 1rem auto 0;
     border-radius: 2px;
   }
@@ -33,19 +33,19 @@ export const MensagemCTA = styled.p`
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   font-weight: 500;
 `;
 
 export const TextoContato = styled.p`
   font-size: 1.1rem;
   margin: 1.5rem 0;
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   
   &.disponibilidade {
     font-style: italic;
     margin-top: 3rem;
-    color: var(--cor-texto-claro);
+    color: ${({ theme }) => theme.textoClaro};
   }
 `;
 
@@ -62,23 +62,28 @@ export const LinkRedeSocial = styled.a`
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.5rem;
-  background: white;
+  background: ${({ theme }) => theme.secundaria};
   border-radius: 50px;
   text-decoration: none;
-  color: var(--cor-texto);
+  color: ${({ theme }) => theme.texto};
   font-weight: 500;
   transition: all 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   
   svg {
     font-size: 1.3rem;
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.primaria};
   }
   
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    color: var(--cor-destaque);
+    color: ${({ theme }) => theme.destaque};
+    
+    svg {
+      transition: all 0.3s ease;
+      color: ${({ theme }) => theme.destaque};
+    }
   }
 `;
 
