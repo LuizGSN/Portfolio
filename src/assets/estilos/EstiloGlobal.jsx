@@ -33,7 +33,6 @@ const EstiloGlobal = createGlobalStyle`
   }
 
   :focus {
-    outline: 2px solid var(--cor-primaria);
     outline-offset: 2px;
   }
 

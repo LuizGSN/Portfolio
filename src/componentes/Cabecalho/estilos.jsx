@@ -45,7 +45,7 @@ export const Navegacao = styled.nav`
     display: flex;
     gap: 2.5rem;
     list-style: none;
-    align-items: center; /* Adicione isso para alinhamento vertical */
+    align-items: center;
     margin: 0;
     padding: 0;
   }

@@ -26,6 +26,8 @@ export const SecaoHero = styled.section`
   background-color: var(--cor-secundaria);
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  width: 100%;
 
   &::before {
     content: '';
@@ -58,6 +60,7 @@ export const HeroContainer = styled.div`
 export const ConteudoHero = styled.div`
   position: relative;
   z-index: 1;
+  height: 100%;
   max-width: 800px;
   animation: ${fadeIn} 1s ease-out forwards;
   text-align: center;
@@ -122,14 +125,14 @@ export const BotaoHero = styled.button`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
   z-index: 1;
 
   &:hover {
     background-color: var(--cor-destaque);
-    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
 

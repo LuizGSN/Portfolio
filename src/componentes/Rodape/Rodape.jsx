@@ -1,18 +1,50 @@
-import styled from 'styled-components';
-
-const Container = styled.footer`
-  padding: 2rem;
-  text-align: center;
-  background: #333;
-  color: white;
-`;
+import React from 'react';
+import {
+  ContainerRodape,
+  ConteudoRodape,
+  LinksRedeSocial,
+  LinkSocial,
+  Creditos
+} from './estilos';
+import { FaGithub, FaLinkedin, FaHeart } from 'react-icons/fa';
+import { HiMail } from 'react-icons/hi';
 
 function Rodape() {
   return (
-    <Container>
-      <p>© {new Date().getFullYear()} Meu Portfólio</p>
-      <p>Desenvolvido com React e Styled Components</p>
-    </Container>
+    <ContainerRodape>
+      <ConteudoRodape>
+        <LinksRedeSocial>
+          <LinkSocial 
+            href="https://github.com/seu-usuario" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub size={24} />
+          </LinkSocial>
+          
+          <LinkSocial 
+            href="https://linkedin.com/in/seu-perfil" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={24} />
+          </LinkSocial>
+          
+          <LinkSocial 
+            href="mailto:seu-email@exemplo.com" 
+            aria-label="Enviar e-mail"
+          >
+            <HiMail size={24} />
+          </LinkSocial>
+        </LinksRedeSocial>
+        
+        <Creditos>
+          © {new Date().getFullYear()} Luiz Gonzaga - Feito com <FaHeart color="#ff6b6b" /> e React
+        </Creditos>
+      </ConteudoRodape>
+    </ContainerRodape>
   );
 }
 
