@@ -1,24 +1,9 @@
 import React from 'react';
-import { 
-  SecaoHabilidades, 
-  TituloSecao, 
-  ContainerGrid,
-  ColunaSoftSkills,
-  ListaSoftSkills,
-  ItemSoftSkill,
-  ColunaHardSkills,
-  IconeHardSkill,
-  GridHardSkills
-} from './estilos';
-import { 
-  DiJavascript1, DiReact, DiNodejs, DiHtml5, DiCss3, DiDatabase,
-  DiGit, DiGithubBadge, DiPython
-} from 'react-icons/di';
-import { 
-  FaUsers, FaComments, FaLightbulb, FaHandsHelping, FaClock 
-} from 'react-icons/fa';
+import { SecaoHabilidades, TituloSecao, ContainerGrid, ColunaSoftSkills, ListaSoftSkills, ItemSoftSkill, ColunaHardSkills, IconeHardSkill, GridHardSkills} from './estilos';
+import { DiJavascript1, DiReact, DiNodejs, DiHtml5, DiCss3, DiGit, DiGithubBadge, DiPython, DiFirebase} from 'react-icons/di';
+import {FaUsers, FaComments, FaLightbulb, FaHandsHelping, FaClock} from 'react-icons/fa';
 import { MdOutlineChangeCircle } from 'react-icons/md';
-import { SiTypescript, SiStyledcomponents } from 'react-icons/si';
+import { SiTypescript, SiStyledcomponents, SiSqlite } from 'react-icons/si';
 
 function Habilidades() {
   const hardSkills = [
@@ -30,9 +15,10 @@ function Habilidades() {
     { nome: 'HTML5', icone: <DiHtml5 /> },
     { nome: 'CSS3', icone: <DiCss3 /> },
     { nome: 'Styled Components', icone: <SiStyledcomponents /> },
-    { nome: 'Banco de Dados', icone: <DiDatabase /> },
     { nome: 'Git', icone: <DiGit /> },
     { nome: 'GitHub', icone: <DiGithubBadge /> },
+    { nome: 'Sqlite', icone: <SiSqlite /> },
+    { nome: 'Banco de Dados', icone: <DiFirebase /> },
   ];
 
   const softSkills = [

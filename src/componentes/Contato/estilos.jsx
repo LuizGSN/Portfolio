@@ -49,44 +49,6 @@ export const TextoContato = styled.p`
   }
 `;
 
-export const RedesSociais = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-`;
-
-export const LinkRedeSocial = styled.a`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  background: ${({ theme }) => theme.secundaria};
-  border-radius: 50px;
-  text-decoration: none;
-  color: ${({ theme }) => theme.texto};
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-  svg {
-    font-size: 1.3rem;
-    color: ${({ theme }) => theme.primaria};
-  }
-  
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    color: ${({ theme }) => theme.destaque};
-    
-    svg {
-      transition: all 0.3s ease;
-      color: ${({ theme }) => theme.destaque};
-    }
-  }
-`;
-
 export const BotaoWhatsapp = styled.a`
   display: inline-flex;
   align-items: center;
@@ -99,7 +61,6 @@ export const BotaoWhatsapp = styled.a`
   font-weight: 600;
   margin: 2rem auto;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
   
   svg {
     font-size: 1.5rem;
@@ -108,6 +69,24 @@ export const BotaoWhatsapp = styled.a`
   &:hover {
     background: #128C7E;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+`;
+
+export const RedesSociaisInfo = styled.p`
+  color: ${({ theme }) => theme.texto};
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-style: italic;
+  
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
   }
 `;

@@ -6,7 +6,6 @@ import EstiloGlobal from './assets/estilos/EstiloGlobal';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape/Rodape';
 import PaginaInicial from './paginas/PaginaInicial';
-import DetalhesProjeto from './paginas/DetalhesProjeto';
 
 function App() {
   const [temaDark, setTemaDark] = useState(false);
@@ -22,7 +21,6 @@ function App() {
         <Cabecalho alternarTema={alternarTema} temaDark={temaDark} />
         <Routes>
           <Route path="/" element={<PaginaInicial />} />
-          <Route path="/projetos/:id" element={<DetalhesProjeto />} />
         </Routes>
         <Rodape />
       </Router>

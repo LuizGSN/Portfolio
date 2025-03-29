@@ -16,7 +16,7 @@ function Rodape() {
         <LinksRedeSocial>
 
           <LinkSocial 
-            href="https://linkedin.com/in/seu-perfil" 
+            href="https://www.linkedin.com/in/luiz-gonzaga-sá-198490ba/" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -25,7 +25,7 @@ function Rodape() {
           </LinkSocial>
 
           <LinkSocial 
-            href="https://github.com/seu-usuario" 
+            href="https://github.com/LuizGSN" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -34,7 +34,9 @@ function Rodape() {
           </LinkSocial>
           
           <LinkSocial 
-            href="mailto:seu-email@exemplo.com" 
+            href="mailto:luiz_sa7@hotmail.com" 
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Enviar e-mail"
           >
             <HiMail size={24} />
@@ -42,7 +44,7 @@ function Rodape() {
         </LinksRedeSocial>
         
         <Creditos>
-          © {new Date().getFullYear()} Luiz Gonzaga
+          © {new Date().getFullYear()} Luiz Gonzaga - Todos os direitos reservados
         </Creditos>
       </ConteudoRodape>
     </ContainerRodape>

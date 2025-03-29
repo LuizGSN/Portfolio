@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerRodape = styled.footer`
-  padding: 3rem 5%;
+  padding: 2rem 5%;
   background: ${({ theme }) => theme.fundo === '#252A34' ? '#252A34' : theme.primaria};
   color: ${({ theme }) => theme.secundaria};
   border-top: 1px solid rgba(255, 255, 255, 0.2);

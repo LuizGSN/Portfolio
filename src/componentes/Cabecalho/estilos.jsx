@@ -1,38 +1,34 @@
 import styled from 'styled-components';
 
-export const ContainerCabecalho = styled.header`
+export const NavbarContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  background-color: ${({ theme }) => theme.fundo};
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  padding: ${({ $scrolled }) => $scrolled ? '1.5rem 5%' : '1.5rem 5%'};
+  background: ${({ theme }) => theme.fundo + 'cc'};
+  backdrop-filter: blur(12px);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-
-  &.scroll {
-    padding: 1rem 5%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid ${({ theme }) => theme.primaria + '20'};
 `;
 
-export const Logo = styled.div`
+export const NavLogo = styled.div`
   font-size: 1.8rem;
   font-weight: 700;
   color: ${({ theme }) => theme.primaria};
   cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: transform 0.3s, color 0.3s;
 
   &:hover {
-    transform: scale(1.05);
     color: ${({ theme }) => theme.destaque};
+    transform: translateY(-2px);
   }
 
   span {
@@ -40,136 +36,119 @@ export const Logo = styled.div`
   }
 `;
 
-export const Navegacao = styled.nav`
-  ul {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  a, button {
-    font-weight: 500;
-    color: ${({ theme }) => theme.primaria};
-    text-decoration: none;
-    transition: all 0.3s;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    position: relative;
-
-    &:hover {
-      color: ${({ theme }) => theme.primaria};
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background-color: ${({ theme }) => theme.destaque};
-      transition: width 0.3s;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-
-    &.active {
-      font-weight: 600;
-      color: ${({ theme }) => theme.destaque};
-    }
-  }
+export const NavMenu = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
-export const MenuMobile = styled.div`
-  display: none;
+export const NavItem = styled.a`
+  position: relative;
+  font-weight: ${({ $active }) => $active ? '600' : '500'};
+  color: ${({ theme, $active }) => $active ? theme.destaque : theme.primaria};
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
   cursor: pointer;
-  z-index: 1001;
-  
-  @media (max-width: 768px) {
-    display: block;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  font-family: inherit;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: ${({ $active }) => $active ? '100%' : '0'};
+    height: 2px;
+    background: ${({ theme }) => theme.destaque};
+    transition: width 0.3s ease;
   }
 
-  svg {
-    transition: transform 0.3s;
-    color: ${({ theme }) => theme.primaria};
+  &:hover {
+    color: ${({ theme }) => theme.destaque};
     
-    &:hover {
-      transform: scale(1.1);
+    &::after {
+      width: 100%;
     }
   }
 `;
 
-export const BotaoTema = styled.button`
-  background: ${({ theme }) => theme.destaque};
-  color: ${({ theme }) => theme.fundo};
-  border: none;
-  border-radius: 50px;
-  padding: 8px 16px;
+export const MobileMenuButton = styled.div`
+  display: none;
   cursor: pointer;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: ${({ theme }) => theme.primaria};
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
-export const MenuMobileContainer = styled.div`
+export const MobileMenu = styled.div`
   position: fixed;
   top: 0;
-  right: ${({ $aberto }) => ($aberto ? '0' : '-100%')};
+  right: 0;
   width: 70%;
   height: 100vh;
-  background: ${({ theme }) => theme.fundo};
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease;
-  z-index: 1000;
+  background: ${({ theme }) => theme.fundo + 'ee'};
+  backdrop-filter: blur(15px);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  z-index: 999;
   padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  transform: ${({ $open }) => $open ? 'translateX(0)' : 'translateX(100%)'};
+  transition: transform 0.3s ease;
 
-  a, button {
-    color: ${({ theme }) => theme.primaria};
-    text-decoration: none;
+  ${NavItem} {
     font-size: 1.2rem;
-    padding: 0.5rem;
-    border-bottom: 1px solid ${({ theme }) => theme.destaque};
-    transition: color 0.3s;
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    font-family: inherit;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid ${({ theme }) => theme.primaria + '20'};
+  }
+`;
 
-    &:hover {
-      color: ${({ theme }) => theme.primaria};
-    }
+export const ThemeToggle = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.fundo};
+  border: 2px solid ${({ theme }) => theme.primaria};
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 
-    &.active {
-      color: ${({ theme }) => theme.destaque};
-      font-weight: 600;
-    }
+  .sun, .moon {
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .sun {
+    opacity: ${({ $temaDark }) => $temaDark ? 0 : 1};
+    transform: ${({ $temaDark }) => $temaDark ? 'translateY(50px)' : 'translateY(0)'};
+  }
+
+  .moon {
+    color: var(--cor-primaria);
+    opacity: ${({ $temaDark }) => $temaDark ? 1 : 0};
+    transform: ${({ $temaDark }) => $temaDark ? 'translateY(0)' : 'translateY(-50px)'};
+  }
+
+  &:hover {
+    transform: rotate(30deg);
   }
 `;

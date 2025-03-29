@@ -36,7 +36,10 @@ import {
   SiNextdotjs,
   SiStyledcomponents,
   SiRedux,
-  SiFramer
+  SiFramer,
+  SiSqlite,
+  SiAxios,
+  SiReactrouter 
 } from 'react-icons/si';
 
 const Tecnologia = ({ nome }) => {
@@ -55,7 +58,10 @@ const Tecnologia = ({ nome }) => {
     'GitHub': <DiGithubBadge />,
     'Firebase': <DiFirebase />,
     'Sass': <DiSass />,
-    'Framer Motion': <SiFramer />
+    'Framer Motion': <SiFramer />,
+    'Sqlite': <SiSqlite />,
+    'Axios': <SiAxios />,
+    'Reactrouter': <SiReactrouter />
   };
 
   return (
@@ -113,20 +119,20 @@ function Projetos() {
   const projetos = [
     {
       id: 1,
-      titulo: "Plataforma de E-commerce",
-      descricao: "Sistema completo de loja virtual com carrinho, checkout e integração com pagamentos.",
-      imagem: "src/assets/imagens/exemplo1.webp",
-      tecnologias: ["React", "Node.js", "MongoDB", "Redux"],
-      linkRepositorio: "https://github.com/seu-usuario/ecommerce",
+      titulo: "Keeg Club | Blog Full-Stack",
+      descricao: "Blog full-stack desenvolvido com React (frontend) e Node.js (backend), implementando autenticação segura via JWT e armazenamento de dados em SQLite. Projeto construído do zero, com integração fluida entre interfaces e API, além de um sistema completo de login.",
+      imagem: "src/assets/imagens/Interface Keeg-Club.png",
+      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Sqlite", "Styled Components", "Axios","Reactrouter"],
+      linkRepositorio: "https://github.com/LuizGSN/Site-Keeg-Club",
       linkDemo: "#"
     },
     {
       id: 2,
-      titulo: "Aplicativo de Tarefas",
-      descricao: "Organizador de tarefas com drag-and-drop, notificações e sincronização em tempo real.",
-      imagem: "src/assets/imagens/exemplo2.webp", 
-      tecnologias: ["React", "Firebase", "TypeScript", "Styled Components"],
-      linkRepositorio: "https://github.com/seu-usuario/task-app",
+      titulo: "Portfólio | Demonstração de Habilidades em Front-End",
+      descricao: "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
+      imagem: "src/assets/imagens/Capa Portfólio.png", 
+      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Styled Components"],
+      linkRepositorio: "https://github.com/LuizGSN/Portfolio",
       linkDemo: "#"
     }
   ];
