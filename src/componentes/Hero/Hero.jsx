@@ -15,7 +15,7 @@ const Hero = () => {
   const [textoDigitado, setTextoDigitado] = useState('');
   const [estaDigitando, setEstaDigitando] = useState(true);
   const textoCompleto = React.useMemo(() => 
-    "Desenvolvedor Fullstack com expertise em criar soluções web performáticas", 
+    "Full Stack Developer - De gerente PJ no Itaú para a vida de Dev, hoje transformo problemas complexos em código simples!", 
   []);
 
   React.useEffect(() => {
@@ -76,7 +76,7 @@ const Hero = () => {
 
           <RedesSociais>
             <IconeRedeSocial 
-              href="https://github.com/seu-usuario" 
+              href="https://github.com/LuizGSN" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -84,7 +84,7 @@ const Hero = () => {
               <FaGithub />
             </IconeRedeSocial>
             <IconeRedeSocial 
-              href="https://linkedin.com/in/seu-perfil" 
+              href="https://www.linkedin.com/in/luiz-gonzaga-sá-198490ba/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="LinkedIn"

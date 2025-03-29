@@ -62,8 +62,43 @@ export const TextoSobre = styled.div`
     font-size: 1.1rem;
   }
 
+  .underline {
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.destaque};
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+
   @media (max-width: 768px) {
     text-align: center;
+  }
+`;
+
+export const Highlights = styled.div`
+  background: ${({ theme }) => theme.destaque + '20'};
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 3px solid ${({ theme }) => theme.destaque};
+
+  p {
+    margin: 10px 0;
+    font-size: 0.95em;
+    color: ${({ theme }) => theme.texto};
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: '•';
+      color: ${({ theme }) => theme.destaque};
+      font-weight: bold;
+    }
+  }
+
+  hr {
+    border: 1px solid ${({ theme }) => theme.destaque + '30'};
+    margin: 15px 0;
   }
 `;
 
