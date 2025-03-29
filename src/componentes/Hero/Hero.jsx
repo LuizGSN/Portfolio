@@ -15,7 +15,7 @@ const Hero = () => {
   const [textoDigitado, setTextoDigitado] = useState('');
   const [estaDigitando, setEstaDigitando] = useState(true);
   const textoCompleto = React.useMemo(() => 
-    "Full Stack Developer - De gerente PJ no Itaú para a vida de Dev, hoje transformo problemas complexos em código simples!", 
+    "Full Stack Developer - Transformando problemas complexos em código simples!", 
   []);
 
   React.useEffect(() => {

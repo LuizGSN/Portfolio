@@ -43,8 +43,8 @@ function Sobre() {
                   style={{ marginRight: "8px", verticalAlign: "middle" }}
                 />
                 Me diferencio pelo meu conhecimento em negócios, pois combino{" "}
-                <span className="underline">6 anos de experiência</span> (como
-                ex-Gerente PJ no Itaú) com habilidades técnicas avançadas. Como
+                <span className="underline">6 anos de experiência </span>
+                com habilidades técnicas avançadas. Como
                 profissional <span className="underline">bilíngue</span>,
                 consigo colaborar em projetos internacionais e absorver
                 conteúdos técnicos globais.
