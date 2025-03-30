@@ -6,6 +6,7 @@ import EstiloGlobal from './assets/estilos/EstiloGlobal';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape/Rodape';
 import PaginaInicial from './paginas/PaginaInicial';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [temaDark, setTemaDark] = useState(false);
@@ -21,6 +22,7 @@ function App() {
         <Cabecalho alternarTema={alternarTema} temaDark={temaDark} />
         <Routes>
           <Route path="/" element={<PaginaInicial />} />
+          <SpeedInsights />
         </Routes>
         <Rodape />
       </Router>
