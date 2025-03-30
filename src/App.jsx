@@ -7,6 +7,7 @@ import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape/Rodape';
 import PaginaInicial from './paginas/PaginaInicial';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [temaDark, setTemaDark] = useState(false);
@@ -26,6 +27,7 @@ function App() {
         <Rodape />
       </Router>
       <SpeedInsights />
+      <Analytics />
     </ThemeProvider>
   );
 }
