@@ -22,10 +22,10 @@ function App() {
         <Cabecalho alternarTema={alternarTema} temaDark={temaDark} />
         <Routes>
           <Route path="/" element={<PaginaInicial />} />
-          <SpeedInsights />
         </Routes>
         <Rodape />
       </Router>
+      <SpeedInsights />
     </ThemeProvider>
   );
 }
