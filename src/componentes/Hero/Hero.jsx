@@ -47,7 +47,7 @@ const Hero = () => {
     const cvUrl = '/caminho/para/seu-curriculo.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Curriculo-Luiz-Gonzaga.pdf';
+    link.download = 'public/docs/LuizGSN-Curriculo.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
