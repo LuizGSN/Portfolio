@@ -32,7 +32,7 @@ function Sobre() {
                 formado na <span className="underline">Infinity School</span>,
                 especializado em{" "}
                 <span className="underline">
-                  JavaScript, Python, React e Node.js
+                  HTML, CSS, JavaScript, React, Python, Node.JS e Banco de Dados
                 </span>
                 . Transformo ideias em produtos digitais{" "}
                 <span className="underline">eficientes e escaláveis</span>.
@@ -42,9 +42,9 @@ function Sobre() {
                 <FaChartLine
                   style={{ marginRight: "8px", verticalAlign: "middle" }}
                 />
-                Me diferencio pelo meu conhecimento em negócios, pois combino{" "}
+                Meu diferencial é combinar {" "}
                 <span className="underline">6 anos de experiência </span>
-                com habilidades técnicas avançadas. Como
+                no mundo dos negócios (Itaú Unibanco), com habilidades técnicas avançadas. Como
                 profissional <span className="underline">bilíngue</span>,
                 consigo colaborar em projetos internacionais e absorver
                 conteúdos técnicos globais.
@@ -68,9 +68,9 @@ function Sobre() {
                 <FaGamepad
                   style={{ marginRight: "8px", verticalAlign: "middle" }}
                 />
-                Nas horas vagas, alimento meu lado criativo no{" "}
+                Nas horas vagas, alimento a criatividade no{" "}
                 <span className="underline">meu blog Keeg Club</span>, onde
-                exploro cultura geek - essa paixão me ajuda a pensar{" "}
+                exploro cultura Geek - essa paixão me ajuda a pensar{" "}
                 <span className="underline">fora da caixa</span> nos projetos.
               </p>
             </TextoSobre>
@@ -90,7 +90,7 @@ function Sobre() {
 
           <ImagemSobre>
             <img
-              src="src/assets/imagens/LuizGSN-completo.jpg"
+              src="public/imagens/LuizGSN-completo.jpg"
               alt="Luiz Gonzaga"
             />
           </ImagemSobre>

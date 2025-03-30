@@ -1,9 +1,9 @@
-import React from 'react';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import { 
-  SecaoProjetos, 
-  TituloSecao, 
-  GradeProjetos, 
+import React from "react";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
+import {
+  SecaoProjetos,
+  TituloSecao,
+  GradeProjetos,
   LinkProjeto,
   CartaoProjeto,
   ImagemContainer,
@@ -16,10 +16,10 @@ import {
   BotaoProjeto,
   OverlayImagem,
   BotoesAcao,
-  BotaoRepositorio
-} from './estilos';
+  BotaoRepositorio,
+} from "./estilos";
 
-import { 
+import {
   DiReact,
   DiNodejs,
   DiMongodb,
@@ -29,39 +29,39 @@ import {
   DiGit,
   DiGithubBadge,
   DiFirebase,
-  DiSass
-} from 'react-icons/di';
-import { 
-  SiTypescript, 
+  DiSass,
+} from "react-icons/di";
+import {
+  SiTypescript,
   SiNextdotjs,
   SiStyledcomponents,
   SiRedux,
   SiFramer,
   SiSqlite,
   SiAxios,
-  SiReactrouter 
-} from 'react-icons/si';
+  SiReactrouter,
+} from "react-icons/si";
 
 const Tecnologia = ({ nome }) => {
   const iconesTecnologias = {
-    'React': <DiReact />,
-    'Node.js': <DiNodejs />,
-    'MongoDB': <DiMongodb />,
-    'HTML5': <DiHtml5 />,
-    'CSS3': <DiCss3 />,
-    'JavaScript': <DiJavascript1 />,
-    'TypeScript': <SiTypescript />,
-    'Next.js': <SiNextdotjs />,
-    'Styled Components': <SiStyledcomponents />,
-    'Redux': <SiRedux />,
-    'Git': <DiGit />,
-    'GitHub': <DiGithubBadge />,
-    'Firebase': <DiFirebase />,
-    'Sass': <DiSass />,
-    'Framer Motion': <SiFramer />,
-    'Sqlite': <SiSqlite />,
-    'Axios': <SiAxios />,
-    'Reactrouter': <SiReactrouter />
+    React: <DiReact />,
+    "Node.js": <DiNodejs />,
+    MongoDB: <DiMongodb />,
+    HTML5: <DiHtml5 />,
+    CSS3: <DiCss3 />,
+    JavaScript: <DiJavascript1 />,
+    TypeScript: <SiTypescript />,
+    "Next.js": <SiNextdotjs />,
+    "Styled Components": <SiStyledcomponents />,
+    Redux: <SiRedux />,
+    Git: <DiGit />,
+    GitHub: <DiGithubBadge />,
+    Firebase: <DiFirebase />,
+    Sass: <DiSass />,
+    "Framer Motion": <SiFramer />,
+    Sqlite: <SiSqlite />,
+    Axios: <SiAxios />,
+    Reactrouter: <SiReactrouter />,
   };
 
   return (
@@ -74,44 +74,44 @@ const Tecnologia = ({ nome }) => {
 
 const ProjetoCard = ({ projeto }) => {
   return (
-      <CartaoProjeto>
-        <ImagemContainer>
-          <ImagemProjeto 
-            src={projeto.imagem} 
-            alt={projeto.titulo}
-            loading="lazy"
-          />
-          <OverlayImagem />
-          <BotoesAcao>
-            {projeto.linkRepositorio && (
-              <BotaoRepositorio 
-                href={projeto.linkRepositorio} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FiGithub /> GitHub
-              </BotaoRepositorio>
-            )}
-          <BotaoRepositorio
-              href={projeto.linkDemo}
+    <CartaoProjeto>
+      <ImagemContainer>
+        <ImagemProjeto
+          src={projeto.imagem}
+          alt={projeto.titulo}
+          loading="lazy"
+        />
+        <OverlayImagem />
+        <BotoesAcao>
+          {projeto.linkRepositorio && (
+            <BotaoRepositorio
+              href={projeto.linkRepositorio}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Projeto
-            <FiExternalLink />
+              <FiGithub /> GitHub
             </BotaoRepositorio>
-          </BotoesAcao>
-        </ImagemContainer>
-        <InfoProjeto>
-          <TituloProjeto>{projeto.titulo}</TituloProjeto>
-          <DescricaoProjeto>{projeto.descricao}</DescricaoProjeto>
-          <IconesTecnologia>
-            {projeto.tecnologias.map(tech => (
-              <Tecnologia key={tech} nome={tech} />
-            ))}
-          </IconesTecnologia>
-        </InfoProjeto>
-      </CartaoProjeto>
+          )}
+          <BotaoRepositorio
+            href={projeto.linkDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Projeto
+            <FiExternalLink />
+          </BotaoRepositorio>
+        </BotoesAcao>
+      </ImagemContainer>
+      <InfoProjeto>
+        <TituloProjeto>{projeto.titulo}</TituloProjeto>
+        <DescricaoProjeto>{projeto.descricao}</DescricaoProjeto>
+        <IconesTecnologia>
+          {projeto.tecnologias.map((tech) => (
+            <Tecnologia key={tech} nome={tech} />
+          ))}
+        </IconesTecnologia>
+      </InfoProjeto>
+    </CartaoProjeto>
   );
 };
 
@@ -120,28 +120,44 @@ function Projetos() {
     {
       id: 1,
       titulo: "Keeg Club | Blog Full-Stack",
-      descricao: "Blog full-stack desenvolvido com React (frontend) e Node.js (backend), implementando autenticação segura via JWT e armazenamento de dados em SQLite. Projeto construído do zero, com integração fluida entre interfaces e API, além de um sistema completo de login.",
-      imagem: "src/assets/imagens/Interface Keeg-Club.png",
-      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Sqlite", "Styled Components", "Axios","Reactrouter"],
+      descricao:
+        "Blog full-stack desenvolvido com React (frontend) e Node.js (backend), implementando autenticação segura via JWT e armazenamento de dados em SQLite. Projeto construído do zero, com integração fluida entre interfaces e API, além de um sistema completo de login.",
+      imagem: "public/imagens/Interface Keeg-Club.png",
+      tecnologias: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Sqlite",
+        "Styled Components",
+      ],
       linkRepositorio: "https://github.com/LuizGSN/Site-Keeg-Club",
-      linkDemo: "#"
+      linkDemo: "#",
     },
     {
       id: 2,
       titulo: "Portfólio | Demonstração de Habilidades em Front-End",
-      descricao: "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
-      imagem: "src/assets/imagens/Capa Portfólio.png", 
-      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Styled Components"],
+      descricao:
+        "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
+      imagem: "public/imagens/Capa Portfólio.png",
+      tecnologias: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Styled Components",
+      ],
       linkRepositorio: "https://github.com/LuizGSN/Portfolio",
-      linkDemo: "#"
-    }
+      linkDemo: "#",
+    },
   ];
 
   return (
     <SecaoProjetos id="projetos">
       <TituloSecao>Meus Projetos</TituloSecao>
       <GradeProjetos>
-        {projetos.map(projeto => (
+        {projetos.map((projeto) => (
           <ProjetoCard key={projeto.id} projeto={projeto} />
         ))}
       </GradeProjetos>
