@@ -90,7 +90,7 @@ function Sobre() {
 
           <ImagemSobre>
             <img
-              src="public/imagens/LuizGSN-completo.jpg"
+              src="/imagens/LuizGSN-completo.jpg"
               alt="Luiz Gonzaga"
             />
           </ImagemSobre>

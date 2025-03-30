@@ -122,7 +122,7 @@ function Projetos() {
       titulo: "Keeg Club | Blog Full-Stack",
       descricao:
         "Blog full-stack desenvolvido com React (frontend) e Node.js (backend), implementando autenticação segura via JWT e armazenamento de dados em SQLite. Projeto construído do zero, com integração fluida entre interfaces e API, além de um sistema completo de login.",
-      imagem: "public/imagens/Interface Keeg-Club.png",
+      imagem: "/imagens/Interface Keeg-Club.png",
       tecnologias: [
         "HTML5",
         "CSS3",
@@ -140,7 +140,7 @@ function Projetos() {
       titulo: "Portfólio | Demonstração de Habilidades em Front-End",
       descricao:
         "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
-      imagem: "public/imagens/Capa Portfólio.png",
+      imagem: "/imagens/Capa Portfólio.png",
       tecnologias: [
         "HTML5",
         "CSS3",
