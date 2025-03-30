@@ -6,7 +6,7 @@ import EstiloGlobal from './assets/estilos/EstiloGlobal';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
 import Rodape from './componentes/Rodape/Rodape';
 import PaginaInicial from './paginas/PaginaInicial';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [temaDark, setTemaDark] = useState(false);
