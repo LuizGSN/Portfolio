@@ -149,7 +149,7 @@ function Projetos() {
         "Styled Components",
       ],
       linkRepositorio: "https://github.com/LuizGSN/Portfolio",
-      linkDemo: "#",
+      linkDemo: "https://portfolio-luizgsn.vercel.app",
     },
   ];
 
