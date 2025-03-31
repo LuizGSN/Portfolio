@@ -49,12 +49,12 @@ export const ContainerGrid = styled.div`
 
 export const ColunaHardSkills = styled.div`
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--cor-secundaria);
   border-radius: 16px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   
   h3 {
     font-size: 2rem;
@@ -92,7 +92,7 @@ export const IconeHardSkill = styled.div`
   justify-content: center;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--cor-texto-escuro);
+  color: var(--cor-texto);
   padding: 1.2rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.2);
@@ -107,13 +107,10 @@ export const IconeHardSkill = styled.div`
     transition: color 0.3s ease;
   }
 
-  @media (max-width: 768px) {
-    background-color: ${({ theme }) => theme.primaria + '10'};;
-  }
-
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: var(--cor-destaque);
     
     svg {
       color: var(--cor-destaque);
@@ -123,12 +120,12 @@ export const IconeHardSkill = styled.div`
 
 export const ColunaSoftSkills = styled.div`
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--cor-secundaria);
   border-radius: 16px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   h3 {
     font-size: 2rem;
@@ -168,7 +165,7 @@ export const ItemSoftSkill = styled.div`
   gap: 0.8rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--cor-texto-escuro);
+  color: var(--cor-texto);
   padding: 1.2rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.2);
@@ -182,16 +179,13 @@ export const ItemSoftSkill = styled.div`
     color: var(--cor-primaria);
   }
 
-  @media (max-width: 768px) {
-    background-color: ${({ theme }) => theme.primaria + '10'};;
-  }
-
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    svg{
+    color: var(--cor-destaque);
+    
+    svg {
       color: var(--cor-destaque);
     }
-
   }
 `;

@@ -9,19 +9,23 @@ const fadeIn = keyframes`
 
 export const SecaoProjetos = styled.section`
   min-height: 100vh;
-  padding: 8rem 5%;
-  background-color: ${({ theme }) => theme.fundo};
+  padding: 5rem 5%;
+  background-color: var(--cor-fundo);
   display: flex;
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: start;
+
+  @media (max-width: 768px) {
+    padding: 3rem 5%;
+  }
 `;
 
 export const TituloSecao = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: ${({ theme }) => theme.primaria};
+  color: var(--cor-primaria);
   position: relative;
   animation: ${fadeIn} 0.8s ease-out;
   
@@ -30,9 +34,14 @@ export const TituloSecao = styled.h2`
     display: block;
     width: 80px;
     height: 4px;
-    background: ${({ theme }) => theme.destaque};
+    background: var(--cor-destaque);
     margin: 1rem auto 0;
     border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -48,6 +57,7 @@ export const GradeProjetos = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     max-width: 500px;
+    gap: 2rem;
   }
 `;
 
@@ -66,6 +76,10 @@ export const ImagemContainer = styled.div`
   height: 220px;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 480px) {
+    height: 180px;
+  }
 `;
 
 export const ImagemProjeto = styled.img`
@@ -76,22 +90,35 @@ export const ImagemProjeto = styled.img`
 `;
 
 export const InfoProjeto = styled.div`
-  padding: 1.8rem;
+  padding: 1.5rem;
+  background: var(--cor-secundaria);
+
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+  }
 `;
 
 export const TituloProjeto = styled.h3`
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  color: ${({ theme }) => theme.texto};
+  color: var(--cor-texto);
   transition: color 0.3s ease;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const DescricaoProjeto = styled.p`
-  color: ${({ theme }) => theme.textoClaro};
+  color: var(--cor-texto-claro);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const IconesTecnologia = styled.div`
@@ -104,28 +131,29 @@ export const IconesTecnologia = styled.div`
 export const IconeTecnologia = styled.div`
   position: relative;
   font-size: 1.8rem;
-  color: ${({ theme }) => theme.primaria};
+  color: var(--cor-primaria);
   transition: all 0.3s ease;
   cursor: default;
   
   .tooltip {
     position: absolute;
-    bottom: -10px;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: ${({ theme }) => theme.texto};
-    color: ${({ theme }) => theme.fundo};
-    padding: 0 0.3rem;
+    background: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.7rem;
     opacity: 0;
     transition: opacity 0.3s;
     white-space: nowrap;
     pointer-events: none;
+    margin-bottom: 5px;
   }
 
   &:hover {
-    color: ${({ theme }) => theme.destaque};
+    color: var(--cor-destaque);
     transform: scale(1.1);
     
     .tooltip {
@@ -143,10 +171,11 @@ export const CartaoProjeto = styled.div`
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
-  background: ${({ theme }) => theme.secundaria};
+  background: var(--cor-secundaria);
   position: relative;
   z-index: 1;
   will-change: transform;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   
   &:hover {
     transform: translateY(-10px);
@@ -155,6 +184,16 @@ export const CartaoProjeto = styled.div`
     ${ImagemProjeto} {
       transform: scale(1.05);
       filter: brightness(0.9);
+    }
+
+    ${TituloProjeto} {
+      color: var(--cor-destaque);
+    }
+  }
+
+  @media (max-width: 768px) {
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 `;
@@ -182,7 +221,7 @@ export const BotoesAcao = styled.div`
   transform: translateX(-50%) translateY(20px);
   opacity: 0;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   z-index: 2;
   transition: all 0.3s ease;
 
@@ -190,10 +229,17 @@ export const BotoesAcao = styled.div`
     opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
+
+  @media (max-width: 480px) {
+    gap: 1rem;
+    bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const BotaoRepositorio = styled.a`
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 50px;
@@ -203,19 +249,25 @@ export const BotaoRepositorio = styled.a`
   gap: 0.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
+  font-size: 0.9rem;
 
   &:hover {
-    background: rgba(0, 255, 42, 0.7);
+    background: var(--cor-destaque);
     transform: translateY(-2px);
   }
 
   svg {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 `;
 
 export const BotaoProjeto = styled(Link)`
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 50px;
@@ -225,17 +277,24 @@ export const BotaoProjeto = styled(Link)`
   gap: 0.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
+  font-size: 0.9rem;
 
   &:hover {
-    background: rgba(0, 255, 42, 0.7);
+    background: var(--cor-destaque);
     transform: translateY(-2px);
   }
 
   svg {
     transition: transform 0.3s ease;
+    font-size: 1.1rem;
   }
 
   &:hover svg {
     transform: translateX(3px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
   }
 `;
