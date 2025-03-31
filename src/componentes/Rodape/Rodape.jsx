@@ -16,7 +16,7 @@ function Rodape() {
         <LinksRedeSocial>
 
           <LinkSocial 
-            href="https://www.linkedin.com/in/luiz-gonzaga-sá-198490ba/" 
+            href="https://www.linkedin.com/in/luizgsn/" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="LinkedIn"
