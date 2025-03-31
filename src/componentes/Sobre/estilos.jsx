@@ -65,7 +65,7 @@ export const TextoSobre = styled.div`
   .underline {
     text-decoration: underline;
     text-decoration-color: ${({ theme }) => theme.destaque};
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
     font-weight: 500;
   }
 

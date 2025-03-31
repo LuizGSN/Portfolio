@@ -107,6 +107,10 @@ export const IconeHardSkill = styled.div`
     transition: color 0.3s ease;
   }
 
+  @media (max-width: 768px) {
+    background-color: ${({ theme }) => theme.primaria + '10'};;
+  }
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -167,7 +171,7 @@ export const ItemSoftSkill = styled.div`
   color: var(--cor-texto-escuro);
   padding: 1.2rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -178,11 +182,16 @@ export const ItemSoftSkill = styled.div`
     color: var(--cor-primaria);
   }
 
+  @media (max-width: 768px) {
+    background-color: ${({ theme }) => theme.primaria + '10'};;
+  }
+
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     svg{
       color: var(--cor-destaque);
     }
+
   }
 `;

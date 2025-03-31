@@ -77,7 +77,7 @@ function Sobre() {
             <Highlights>
               <hr />
               <p>
-                <span className="underline">Foco Atual:</span> Buscando minha
+                <span className="underline">Objetivo:</span> Buscando minha
                 primeira oportunidade como dev.
               </p>
               <p>
