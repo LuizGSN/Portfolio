@@ -151,6 +151,23 @@ function Projetos() {
       linkRepositorio: "https://github.com/LuizGSN/Portfolio",
       linkDemo: "https://portfolio-luizgsn.vercel.app",
     },
+    {
+      id: 3,
+      titulo: "Keeg Store | Loja Virtual com React e Styled Components",
+      descricao:
+        "Keeg Store é uma aplicação e-commerce construída com React e estilizada com Styled Components. Conta com carrossel de produtos, sistema de favoritos (wishlist), carrinho de compras e navegação entre páginas com React Router, oferecendo uma experiência fluida e interativa.",
+      imagem: "/imagens/Keeg-store.png",
+      tecnologias: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Styled Components",
+        "React Router"
+      ],
+      linkRepositorio: "https://github.com/LuizGSN/Keeg-store",
+      linkDemo: "https://keeg-store.vercel.app",
+    },
   ];
 
   return (
