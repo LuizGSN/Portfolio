@@ -133,7 +133,7 @@ function Projetos() {
         "Styled Components",
       ],
       linkRepositorio: "https://github.com/LuizGSN/Site-Keeg-Club",
-      linkDemo: "#",
+      linkDemo: "https://site-keeg-club.vercel.app",
     },
     {
       id: 2,
