@@ -118,24 +118,6 @@ const ProjetoCard = ({ projeto }) => {
 function Projetos() {
   const projetos = [
     {
-      id: 1,
-      titulo: "Keeg Club | Blog Full-Stack",
-      descricao:
-        "Blog full-stack desenvolvido com React (frontend) e Node.js (backend), implementando autenticação segura via JWT e armazenamento de dados em SQLite. Projeto construído do zero, com integração fluida entre interfaces e API, além de um sistema completo de login.",
-      imagem: "/imagens/Interface Keeg-Club.png",
-      tecnologias: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Sqlite",
-        "Styled Components",
-      ],
-      linkRepositorio: "https://github.com/LuizGSN/Site-Keeg-Club",
-      linkDemo: "https://site-keeg-club.vercel.app",
-    },
-    {
       id: 2,
       titulo: "Portfólio | Demonstração de Habilidades em Front-End",
       descricao:
