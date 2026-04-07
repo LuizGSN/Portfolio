@@ -47,7 +47,7 @@ const Hero = () => {
     const cvUrl = '/docs/LuizGSN_CV.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'LuizGSN-Curriculo.pdf';
+    link.download = 'LuizGSN-CV-novo.docx.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
