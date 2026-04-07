@@ -44,10 +44,10 @@ const Hero = () => {
   }, [textoDigitado, estaDigitando, textoCompleto]);
 
   const handleDownloadCV = () => {
-    const cvUrl = 'public/docs/LuizGSN-CV-novo.docx.pdf';
+    const cvUrl = 'docs/LuizGSN-CV-novo.docx.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'public/docs/LuizGSN-CV-novo.docx.pdf';
+    link.download = 'LuizGSN-CV-novo.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
