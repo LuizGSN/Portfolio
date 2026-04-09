@@ -32,8 +32,8 @@ const Hero = () => {
           }
         } else if (textoDigitado.length > 0) {
           setTextoDigitado(textoCompleto.substring(0, textoDigitado.length - 1));
-          if (textoDigitado.length === 1) {
-            setEstaDigitando(true);
+          if (textoDigitado.length === 0) {
+            setTimeout(() => setEstaDigitando(true), 500);
           }
         }
       }, velocidade);

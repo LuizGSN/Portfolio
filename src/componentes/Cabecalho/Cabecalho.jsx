@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { debounce } from 'lodash';
 import { 
   NavbarContainer,
   NavLogo,
@@ -61,16 +60,19 @@ export default function Cabecalho({ alternarTema, temaDark }) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' && !temaDark) {
-      alternarTema();
+    if (savedTheme === 'dark') {
+      const isDark = savedTheme === 'dark';
+      if (isDark !== temaDark) {
+        alternarTema();
+      }
     }
-  }, []);
+  }, [temaDark, alternarTema]);
 
-  const handleToggleTheme = () => {
+  const handleToggleTheme = useCallback(() => {
     const newTheme = !temaDark;
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
     alternarTema();
-  };
+  }, [temaDark, alternarTema]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -134,7 +136,7 @@ export default function Cabecalho({ alternarTema, temaDark }) {
     };
 
     checkInitialSection();
-  }, []);
+  }, [location.hash]);
 
   useEffect(() => {
     if (location.state?.hash) {

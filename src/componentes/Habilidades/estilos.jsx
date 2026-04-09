@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const SecaoHabilidades = styled.section`
   min-height: 100vh;

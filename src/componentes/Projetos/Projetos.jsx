@@ -40,6 +40,10 @@ import {
   SiSqlite,
   SiAxios,
   SiReactrouter,
+  SiTailwindcss,
+  SiPostgresql,
+  SiExpress,
+  SiDocker,
 } from "react-icons/si";
 
 const Tecnologia = ({ nome }) => {
@@ -62,6 +66,11 @@ const Tecnologia = ({ nome }) => {
     Sqlite: <SiSqlite />,
     Axios: <SiAxios />,
     Reactrouter: <SiReactrouter />,
+    "Tailwind CSS": <SiTailwindcss />,
+    PostgreSQL: <SiPostgresql />,
+    Express: <SiExpress />,
+    Docker: <SiDocker />,
+    JWT: <DiFirebase />,
   };
 
   return (
@@ -118,23 +127,26 @@ const ProjetoCard = ({ projeto }) => {
 function Projetos() {
   const projetos = [
     {
-      id: 2,
-      titulo: "Portfólio | Demonstração de Habilidades em Front-End",
+      id: 1,
+      titulo: "FinanceTrack | Controle Financeiro Pessoal Fullstack",
       descricao:
-        "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
-      imagem: "/imagens/Capa Portfólio.png",
+        "Aplicação fullstack para controle financeiro pessoal, com dashboard interativo, CRUD completo de receitas e despesas, filtros por período, gráficos visuais (pizza, barras e linhas) e análise automática de perfil e hábitos financeiros. Autenticação segura com JWT e bcrypt.",
+      imagem: "/imagens/FinanceTrack.png",
       tecnologias: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
         "React",
-        "Styled Components",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "JWT",
+        "Express",
+        "Recharts",
+        "Docker"
       ],
-      linkRepositorio: "https://github.com/LuizGSN/Portfolio",
-      linkDemo: "https://portfolio-luizgsn.vercel.app",
+      linkRepositorio: "https://github.com/LuizGSN/FinanceTrack",
+      linkDemo: "https://financetrack-rust.vercel.app",
     },
     {
-      id: 3,
+      id: 2,
       titulo: "Keeg Store | Loja Virtual com React e Styled Components",
       descricao:
         "Keeg Store é uma aplicação e-commerce construída com React e estilizada com Styled Components. Conta com carrossel de produtos, sistema de favoritos (wishlist), carrinho de compras e navegação entre páginas com React Router, oferecendo uma experiência fluida e interativa.",
@@ -149,6 +161,22 @@ function Projetos() {
       ],
       linkRepositorio: "https://github.com/LuizGSN/Keeg-store",
       linkDemo: "https://keeg-store.vercel.app",
+    },
+    {
+      id: 3,
+      titulo: "Portfólio | Demonstração de Habilidades em Front-End",
+      descricao:
+        "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
+      imagem: "/imagens/Capa Portfólio.png",
+      tecnologias: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Styled Components",
+      ],
+      linkRepositorio: "https://github.com/LuizGSN/Portfolio",
+      linkDemo: "https://portfolio-luizgsn.vercel.app",
     },
   ];
 

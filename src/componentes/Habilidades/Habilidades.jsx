@@ -17,8 +17,8 @@ function Habilidades() {
     { nome: 'Styled Components', icone: <SiStyledcomponents /> },
     { nome: 'Git', icone: <DiGit /> },
     { nome: 'GitHub', icone: <DiGithubBadge /> },
-    { nome: 'Sqlite', icone: <SiSqlite /> },
-    { nome: 'Banco de Dados', icone: <DiFirebase /> },
+    { nome: 'SQLite', icone: <SiSqlite /> },
+    { nome: 'Firebase', icone: <DiFirebase /> },
   ];
 
   const softSkills = [
