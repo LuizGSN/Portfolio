@@ -19,28 +19,37 @@ const Hero = () => {
   []);
 
   React.useEffect(() => {
-    let timeoutId;
-    const velocidade = estaDigitando ? (textoDigitado.length === 0 ? 150 : 50) : 30;
-    
-    const timeout = () => {
-      timeoutId = setTimeout(() => {
-        if (estaDigitando) {
-          if (textoDigitado.length < textoCompleto.length) {
+    const velocidadeDigitacao = 50;
+    const velocidadeApagamento = 30;
+    const pausaCompleto = 2000;
+    const pausaVazio = 500;
+
+    const executarAnimacao = () => {
+      if (estaDigitando) {
+        if (textoDigitado.length < textoCompleto.length) {
+          const delay = textoDigitado.length === 0 ? 150 : velocidadeDigitacao;
+          let timeoutId = setTimeout(() => {
             setTextoDigitado(textoCompleto.substring(0, textoDigitado.length + 1));
-          } else {
-            setTimeout(() => setEstaDigitando(false), 2000);
-          }
-        } else if (textoDigitado.length > 0) {
-          setTextoDigitado(textoCompleto.substring(0, textoDigitado.length - 1));
-          if (textoDigitado.length === 0) {
-            setTimeout(() => setEstaDigitando(true), 500);
-          }
+          }, delay);
+          return () => clearTimeout(timeoutId);
+        } else {
+          let timeoutId = setTimeout(() => setEstaDigitando(false), pausaCompleto);
+          return () => clearTimeout(timeoutId);
         }
-      }, velocidade);
+      } else {
+        if (textoDigitado.length > 0) {
+          let timeoutId = setTimeout(() => {
+            setTextoDigitado(prev => prev.substring(0, prev.length - 1));
+          }, velocidadeApagamento);
+          return () => clearTimeout(timeoutId);
+        } else {
+          let timeoutId = setTimeout(() => setEstaDigitando(true), pausaVazio);
+          return () => clearTimeout(timeoutId);
+        }
+      }
     };
 
-    timeout();
-    return () => clearTimeout(timeoutId);
+    return executarAnimacao();
   }, [textoDigitado, estaDigitando, textoCompleto]);
 
   const handleDownloadCV = () => {
