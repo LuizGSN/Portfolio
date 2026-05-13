@@ -4,7 +4,6 @@ import {
   SecaoProjetos,
   TituloSecao,
   GradeProjetos,
-  LinkProjeto,
   CartaoProjeto,
   ImagemContainer,
   ImagemProjeto,
@@ -13,7 +12,6 @@ import {
   DescricaoProjeto,
   IconesTecnologia,
   IconeTecnologia,
-  BotaoProjeto,
   OverlayImagem,
   BotoesAcao,
   BotaoRepositorio,
@@ -44,6 +42,7 @@ import {
   SiPostgresql,
   SiExpress,
   SiDocker,
+  SiVite,
 } from "react-icons/si";
 
 const Tecnologia = ({ nome }) => {
@@ -66,10 +65,15 @@ const Tecnologia = ({ nome }) => {
     Sqlite: <SiSqlite />,
     Axios: <SiAxios />,
     Reactrouter: <SiReactrouter />,
+    "React Router": <SiReactrouter />,
     "Tailwind CSS": <SiTailwindcss />,
     PostgreSQL: <SiPostgresql />,
     Express: <SiExpress />,
     Docker: <SiDocker />,
+    Vite: <SiVite />,
+    Neon: <SiPostgresql />,
+    Render: <DiNodejs />,
+    Vercel: <DiGithubBadge />,
     JWT: <DiFirebase />,
   };
 
@@ -140,7 +144,7 @@ function Projetos() {
         "JWT",
         "Express",
         "Recharts",
-        "Docker"
+        "Docker",
       ],
       linkRepositorio: "https://github.com/LuizGSN/FinanceTrack",
       linkDemo: "https://financetrack-rust.vercel.app",
@@ -157,13 +161,32 @@ function Projetos() {
         "JavaScript",
         "React",
         "Styled Components",
-        "React Router"
+        "React Router",
       ],
       linkRepositorio: "https://github.com/LuizGSN/Keeg-store",
       linkDemo: "https://keeg-store.vercel.app",
     },
     {
       id: 3,
+      titulo: "TaskTrack | Gerenciamento de Tarefas Fullstack",
+      descricao:
+        "Aplicação fullstack de gerenciamento de tarefas com API REST, filtros de listagem, prioridade urgente, persistência em PostgreSQL via Neon e interface React com dark mode. Backend publicado no Render e frontend publicado na Vercel.",
+      imagem: "/imagens/TaskTrack.png",
+      tecnologias: [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Neon",
+        "Render",
+        "Vercel",
+      ],
+      linkRepositorio: "https://github.com/LuizGSN/TaskTrack",
+      linkDemo: "https://task-track-client.vercel.app",
+    },
+    {
+      id: 4,
       titulo: "Portfólio | Demonstração de Habilidades em Front-End",
       descricao:
         "Portfólio desenvolvido com React e JSX, criado do zero com estilização dinâmica via Styled Components. Inclui navegação fluida, ícones personalizados e design modular, refletindo minha abordagem técnica e atenção aos detalhes.",
