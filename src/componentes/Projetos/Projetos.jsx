@@ -132,9 +132,9 @@ function Projetos() {
   const projetos = [
     {
       id: 1,
-      titulo: "FinanceTrack | Controle Financeiro Pessoal Fullstack",
+      titulo: "FinanceTrack | App Financeiro Minimalista Fullstack",
       descricao:
-        "Aplicação fullstack para controle financeiro pessoal, com dashboard interativo, CRUD completo de receitas e despesas, filtros por período, gráficos visuais (pizza, barras e linhas) e análise automática de perfil e hábitos financeiros. Autenticação segura com JWT e bcrypt.",
+        "Aplicacao fullstack para controle financeiro pessoal, com interface minimalista em tema claro/escuro, autenticacao JWT, CRUD de receitas e despesas, filtros por periodo, dashboard financeiro, analytics, controle de investimentos e ambiente Docker para testes locais.",
       imagem: "/imagens/FinanceTrack.png",
       tecnologias: [
         "React",

@@ -13,6 +13,9 @@ Portfólio pessoal desenvolvido com React, exibindo projetos, habilidades e info
 - **Integração com redes sociais:** links para GitHub, LinkedIn e WhatsApp
 - **Analytics e Performance:** Vercel Analytics + Speed Insights integrados
 
+## ⭐ Projeto em Destaque
+- **FinanceTrack:** app financeiro minimalista fullstack com React, Node.js, Express, PostgreSQL, JWT, Tailwind CSS, Docker, dashboard financeiro, analytics, CRUD de receitas/despesas e controle de investimentos.
+
 ## 🛠️ Stack Tecnológica
 | Frontend | Estilização | Infra/Deploy |
 |---|---|---|
