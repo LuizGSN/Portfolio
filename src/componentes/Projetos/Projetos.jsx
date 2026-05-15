@@ -143,7 +143,7 @@ function Projetos() {
       id: 1,
       titulo: "FinanceTrack | App Financeiro Minimalista Fullstack",
       descricao:
-        "Aplicacao fullstack para controle financeiro pessoal, com interface minimalista em tema claro/escuro, autenticacao JWT, CRUD de receitas e despesas, filtros por periodo, dashboard financeiro, analytics, controle de investimentos e ambiente Docker para testes locais.",
+        "Aplicacao fullstack para controle financeiro pessoal, com interface minimalista em tema claro/escuro, autenticacao JWT, CRUD de receitas e despesas, dashboard, analytics, controle de investimentos e acesso demo disponivel no login.",
       imagem: "/imagens/FinanceTrack.png",
       tecnologias: [
         "React",
