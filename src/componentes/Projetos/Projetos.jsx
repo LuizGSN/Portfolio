@@ -1,9 +1,16 @@
-import React from "react";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiChevronLeft, FiChevronRight, FiGithub, FiExternalLink } from "react-icons/fi";
 import {
   SecaoProjetos,
   TituloSecao,
-  GradeProjetos,
+  CarrosselContainer,
+  CarrosselViewport,
+  CarrosselTrilha,
+  SlideProjeto,
+  ControleCarrossel,
+  IndicadoresCarrossel,
+  IndicadorCarrossel,
+  ContadorCarrossel,
   CartaoProjeto,
   ImagemContainer,
   ImagemProjeto,
@@ -129,6 +136,8 @@ const ProjetoCard = ({ projeto }) => {
 };
 
 function Projetos() {
+  const [indiceAtual, setIndiceAtual] = useState(0);
+
   const projetos = [
     {
       id: 1,
@@ -203,14 +212,60 @@ function Projetos() {
     },
   ];
 
+  const irParaAnterior = () => {
+    setIndiceAtual((indice) => (indice === 0 ? projetos.length - 1 : indice - 1));
+  };
+
+  const irParaProximo = () => {
+    setIndiceAtual((indice) => (indice === projetos.length - 1 ? 0 : indice + 1));
+  };
+
   return (
     <SecaoProjetos id="projetos">
       <TituloSecao>Meus Projetos</TituloSecao>
-      <GradeProjetos>
-        {projetos.map((projeto) => (
-          <ProjetoCard key={projeto.id} projeto={projeto} />
+      <CarrosselContainer aria-label="Carrossel de projetos">
+        <ControleCarrossel
+          type="button"
+          onClick={irParaAnterior}
+          aria-label="Projeto anterior"
+        >
+          <FiChevronLeft />
+        </ControleCarrossel>
+
+        <CarrosselViewport>
+          <CarrosselTrilha $indiceAtual={indiceAtual}>
+            {projetos.map((projeto) => (
+              <SlideProjeto key={projeto.id}>
+                <ProjetoCard projeto={projeto} />
+              </SlideProjeto>
+            ))}
+          </CarrosselTrilha>
+        </CarrosselViewport>
+
+        <ControleCarrossel
+          type="button"
+          onClick={irParaProximo}
+          aria-label="Proximo projeto"
+        >
+          <FiChevronRight />
+        </ControleCarrossel>
+      </CarrosselContainer>
+
+      <IndicadoresCarrossel aria-label="Selecionar projeto">
+        {projetos.map((projeto, index) => (
+          <IndicadorCarrossel
+            key={projeto.id}
+            type="button"
+            $ativo={index === indiceAtual}
+            onClick={() => setIndiceAtual(index)}
+            aria-label={`Ir para ${projeto.titulo}`}
+          />
         ))}
-      </GradeProjetos>
+      </IndicadoresCarrossel>
+
+      <ContadorCarrossel>
+        {String(indiceAtual + 1).padStart(2, "0")} / {String(projetos.length).padStart(2, "0")}
+      </ContadorCarrossel>
     </SecaoProjetos>
   );
 }

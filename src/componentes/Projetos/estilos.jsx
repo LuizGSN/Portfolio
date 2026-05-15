@@ -61,6 +61,121 @@ export const GradeProjetos = styled.div`
   }
 `;
 
+export const CarrosselContainer = styled.div`
+  width: min(100%, 980px);
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 1.25rem;
+  animation: ${fadeIn} 1s ease-out;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+`;
+
+export const CarrosselViewport = styled.div`
+  overflow: hidden;
+  border-radius: 14px;
+  padding: 0.25rem;
+`;
+
+export const CarrosselTrilha = styled.div`
+  display: flex;
+  transform: translateX(${({ $indiceAtual }) => `-${$indiceAtual * 100}%`});
+  transition: transform 0.45s ease;
+`;
+
+export const SlideProjeto = styled.div`
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: min(100%, 720px);
+  }
+`;
+
+export const ControleCarrossel = styled.button`
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--cor-destaque);
+    color: #ffffff;
+    border-color: var(--cor-destaque);
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:first-of-type {
+      left: 0.25rem;
+    }
+
+    &:last-of-type {
+      right: 0.25rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-50%);
+    }
+  }
+`;
+
+export const IndicadoresCarrossel = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+`;
+
+export const IndicadorCarrossel = styled.button`
+  width: ${({ $ativo }) => ($ativo ? '2rem' : '0.7rem')};
+  height: 0.7rem;
+  border-radius: 999px;
+  border: 0;
+  background: ${({ $ativo }) => ($ativo ? 'var(--cor-destaque)' : 'var(--cor-texto-claro)')};
+  opacity: ${({ $ativo }) => ($ativo ? 1 : 0.35)};
+  cursor: pointer;
+  transition: width 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
+    outline: none;
+  }
+`;
+
+export const ContadorCarrossel = styled.p`
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--cor-texto-claro);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+`;
+
 export const LinkProjeto = styled(Link)`
   text-decoration: none;
   color: inherit;
