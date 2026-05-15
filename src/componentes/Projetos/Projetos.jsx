@@ -220,6 +220,10 @@ function Projetos() {
     setIndiceAtual((indice) => (indice === projetos.length - 1 ? 0 : indice + 1));
   };
 
+  const projetosVisiveis = Array.from({ length: Math.min(3, projetos.length) }, (_, offset) => (
+    projetos[(indiceAtual + offset) % projetos.length]
+  ));
+
   return (
     <SecaoProjetos id="projetos">
       <TituloSecao>Meus Projetos</TituloSecao>
@@ -233,9 +237,9 @@ function Projetos() {
         </ControleCarrossel>
 
         <CarrosselViewport>
-          <CarrosselTrilha $indiceAtual={indiceAtual}>
-            {projetos.map((projeto) => (
-              <SlideProjeto key={projeto.id}>
+          <CarrosselTrilha>
+            {projetosVisiveis.map((projeto) => (
+              <SlideProjeto key={`${indiceAtual}-${projeto.id}`}>
                 <ProjetoCard projeto={projeto} />
               </SlideProjeto>
             ))}

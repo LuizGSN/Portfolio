@@ -62,7 +62,7 @@ export const GradeProjetos = styled.div`
 `;
 
 export const CarrosselContainer = styled.div`
-  width: min(100%, 980px);
+  width: min(100%, 1320px);
   margin: 0 auto;
   position: relative;
   display: grid;
@@ -85,18 +85,27 @@ export const CarrosselViewport = styled.div`
 `;
 
 export const CarrosselTrilha = styled.div`
-  display: flex;
-  transform: translateX(${({ $indiceAtual }) => `-${$indiceAtual * 100}%`});
-  transition: transform 0.45s ease;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SlideProjeto = styled.div`
-  min-width: 100%;
   display: flex;
   justify-content: center;
+  animation: ${fadeIn} 0.35s ease-out;
 
   > div {
-    width: min(100%, 720px);
+    width: 100%;
+    height: 100%;
   }
 `;
 
