@@ -1,24 +1,26 @@
 import React from 'react';
 import { SecaoHabilidades, TituloSecao, ContainerGrid, ColunaSoftSkills, ListaSoftSkills, ItemSoftSkill, ColunaHardSkills, IconeHardSkill, GridHardSkills} from './estilos';
-import { DiJavascript1, DiReact, DiNodejs, DiHtml5, DiCss3, DiGit, DiGithubBadge, DiPython, DiFirebase} from 'react-icons/di';
+import { DiJavascript1, DiReact, DiNodejs, DiHtml5, DiCss3, DiGit, DiGithubBadge} from 'react-icons/di';
 import {FaUsers, FaComments, FaLightbulb, FaHandsHelping, FaClock} from 'react-icons/fa';
 import { MdOutlineChangeCircle } from 'react-icons/md';
-import { SiTypescript, SiStyledcomponents, SiSqlite } from 'react-icons/si';
+import { SiDocker, SiExpress, SiPostgresql, SiStyledcomponents, SiTailwindcss, SiVercel, SiVite } from 'react-icons/si';
 
 function Habilidades() {
   const hardSkills = [
     { nome: 'JavaScript', icone: <DiJavascript1 /> },
-    { nome: 'TypeScript', icone: <SiTypescript /> },
     { nome: 'React', icone: <DiReact /> },
-    { nome: 'Python', icone: <DiPython /> },
+    { nome: 'Vite', icone: <SiVite /> },
     { nome: 'Node.js', icone: <DiNodejs /> },
+    { nome: 'Express', icone: <SiExpress /> },
+    { nome: 'PostgreSQL', icone: <SiPostgresql /> },
+    { nome: 'Tailwind CSS', icone: <SiTailwindcss /> },
+    { nome: 'Styled Components', icone: <SiStyledcomponents /> },
+    { nome: 'Docker', icone: <SiDocker /> },
+    { nome: 'Vercel', icone: <SiVercel /> },
     { nome: 'HTML5', icone: <DiHtml5 /> },
     { nome: 'CSS3', icone: <DiCss3 /> },
-    { nome: 'Styled Components', icone: <SiStyledcomponents /> },
     { nome: 'Git', icone: <DiGit /> },
     { nome: 'GitHub', icone: <DiGithubBadge /> },
-    { nome: 'SQLite', icone: <SiSqlite /> },
-    { nome: 'Firebase', icone: <DiFirebase /> },
   ];
 
   const softSkills = [

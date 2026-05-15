@@ -67,9 +67,9 @@ function Sobre() {
                 style={{ marginRight: "8px", verticalAlign: "middle" }}
               />
               Stack principal:{" "}
-              <span className="underline">React, Node.js, Express.js, Python</span>,{" "}
-              <span className="underline">MySQL, SQLite</span>,{" "}
-              <span className="underline">Git, GitHub e Vercel</span>.
+              <span className="underline">JavaScript, React, Vite, Node.js e Express</span>,{" "}
+              <span className="underline">PostgreSQL/Neon, Tailwind CSS e Styled Components</span>,{" "}
+              <span className="underline">Docker, Git, GitHub, Render e Vercel</span>.
             </p>
 
             <Highlights>
